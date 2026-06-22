@@ -1,6 +1,7 @@
 import customtkinter as ctk
 import keyboard
 import mouse
+import platform
 
 from src.audio.sound_manager import SoundManager
 from src.audio.microphone_manager import MicrophoneManager
@@ -10,6 +11,7 @@ from src.ui.microphone_frame import MicrophoneFrame
 from src.ui.sound_list_frame import SoundListFrame
 
 from src.utils.config import ConfigManager
+from src.utils.resource_path import resource_path
 
 
 
@@ -20,6 +22,7 @@ class App(ctk.CTk):
         super().__init__()
 
         self.title("Soundboard")
+        self.iconbitmap(str(resource_path("assets/icon/icon.ico")))
         self.geometry("900x600")
         self.protocol("WM_DELETE_WINDOW",self.on_close)
 

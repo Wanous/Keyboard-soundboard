@@ -6,6 +6,76 @@ SoundBoard allows you to play sounds using customizable keyboard shortcuts and s
 
 [Application screenshot]
 
+## Supported Operating Systems
+
+### Windows
+
+Fully supported and tested.
+
+Requirements (for development) :
+
+- Python 3.11+
+- VB-Cable
+
+### Linux
+
+Experimental support.
+
+The graphical interface should work, but audio routing through VB-Cable is not available on Linux. Additional work would be required to support PipeWire or PulseAudio virtual devices.
+
+### macOS
+
+Currently unsupported and untested.
+
+## Installation
+> [!IMPORTANT]
+> If you only want to use the software, download the executable in the release and follow the `Using VB-Cable` section.
+
+Else, if you want to develop this software you need to:
+
+1 - Clone the repository: 
+
+```bash
+git clone https://github.com/yourusername/soundboard.git
+
+cd soundboard
+```
+
+2 - Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3 - Run the application:
+
+```bash
+python main.py
+```
+
+## Using VB-Cable
+
+1. Install VB-Cable.
+2. Launch SoundBoard.
+3. Select your microphone.
+4. In Discord (or another application), choose:
+
+```text
+CABLE Output (VB-Audio Virtual Cable)
+```
+
+as your microphone device.
+
+5. Play sounds using the interface or keyboard shortcuts.
+
+The application will automatically mix:
+
+```text
+Microphone + Soundboard
+```
+
+and send the result through VB-Cable.
+
 ## Features
 
 ### Audio Mixing
@@ -54,73 +124,9 @@ The application automatically saves:
 - Local playback state.
 - Stop All shortcut.
 
-## Requirements
-
-### Software
-
-- Python 3.11+
-- VB-Cable
-
-Download VB-Cable:
-
-https://vb-audio.com/Cable/
-
-### Python Dependencies
-
-Install all dependencies with:
-
-```bash
-pip install -r requirements.txt
-```
-
-## Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/soundboard.git
-
-cd soundboard
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the application:
-
-```bash
-python main.py
-```
-
-## Using VB-Cable
-
-1. Install VB-Cable.
-2. Launch SoundBoard.
-3. Select your microphone.
-4. In Discord (or another application), choose:
-
-```text
-CABLE Output (VB-Audio Virtual Cable)
-```
-
-as your microphone device.
-
-5. Play sounds using the interface or keyboard shortcuts.
-
-The application will automatically mix:
-
-```text
-Microphone + Soundboard
-```
-
-and send the result through VB-Cable.
-
 ## Configuration File
 
-Settings are stored in:
+Settings are stored `%APPDATA%/SoundBoard`:
 
 ```text
 config/config.json
@@ -151,35 +157,6 @@ Example:
 }
 ```
 
-## Project Structure
+## Conclusion
 
-```text
-SoundBoard/
-│
-├── assets/
-│   ├── sounds/
-│   └── themes/
-│
-├── audio/
-│   ├── audio_mixer.py
-│   ├── microphone_manager.py
-│   └── sound_manager.py
-│
-├── config/
-│   └── config.json
-│
-├── dialogs/
-│
-├── widgets/
-│
-├── core/
-│   └── config_manager.py
-│
-├── app.py
-├── main.py
-└── requirements.txt
-```
-
-## License
-
-This project is distributed under the MIT License.
+I'm pretty satisfied and happy with the result, so I will probably stop developing this project. Hope you will like it and if you have recommendations or critics I'm will be happy to hear them :3

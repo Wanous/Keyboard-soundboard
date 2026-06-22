@@ -54,7 +54,7 @@ class MicrophoneFrame(ctk.CTkFrame):
 
         self.volume_label = ctk.CTkLabel(
             self,
-            text="Volume microphone"
+            text="Microphone volume"
         )
 
         self.volume_label.pack(

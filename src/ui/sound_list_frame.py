@@ -72,7 +72,7 @@ class SoundListFrame(ctk.CTkFrame):
 
         self.monitor_checkbox = ctk.CTkCheckBox(
             self,
-            text="enable local playback",
+            text="Enable local playback",
             variable=self.app.local_playback_enabled,
             command=self.on_local_playback_changed
         )

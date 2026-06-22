@@ -8,9 +8,10 @@ class ConfigManager:
     DEFAULT_CONFIG = {
 
         "parameters": {
-
             "local_playback_enabled": True,
-            "microphone_volume": 1.0
+            "microphone_volume": 1.0,
+            "default_microphone": 5,
+            "panic_shortcut": "ctrl"
         },
 
         "sound_datas": {}
@@ -23,6 +24,11 @@ class ConfigManager:
         self.CONFIG_PATH = self.APP_DIR / "config/config.json"
 
         self.CONFIG_PATH.parent.mkdir(
+            parents=True,
+            exist_ok=True
+        )
+
+        self.SOUNDS_DIR.mkdir(
             parents=True,
             exist_ok=True
         )
