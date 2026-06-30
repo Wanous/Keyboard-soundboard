@@ -1,10 +1,19 @@
-# SoundBoard
+# Keyboard soundBoard
+![Logo.png](Images/Banniere_KeyboardeSoundboard.png)
+
+<div align=center>
+  <img alt="Taille du code GitHub" src="https://img.shields.io/github/languages/code-size/Wanous/Keyboard-soundboard?label=taille%20du%20code">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Wanous/Keyboard-soundboard?logo=github&style=plastic">
+  <img alt="License" src="https://img.shields.io/github/license/Wanous/Keyboard-soundboard?style=plastic">
+  <p></p>
+  <p>Style your Firefox with simple and easy to custom CSS configurations!</p>
+</div>
 
 A lightweight desktop soundboard built with CustomTkinter.
 
 SoundBoard allows you to play sounds using customizable keyboard shortcuts and send them directly through your microphone using VB-Cable. It includes real-time microphone mixing, per-sound volume control, and global hotkeys, making it useful for gaming, streaming, online meetings, or simply having fun with friends.
 
-[Application screenshot]
+![interface.png](Images/interface.png)
 
 ## Supported Operating Systems
 
@@ -36,9 +45,9 @@ Else, if you want to develop this software you need to:
 1 - Clone the repository: 
 
 ```bash
-git clone https://github.com/yourusername/soundboard.git
+git clone https://github.com/Wanous/Keyboard-soundboard.git
 
-cd soundboard
+cd Keyboard-soundboard
 ```
 
 2 - Install dependencies:
@@ -95,23 +104,17 @@ and send the result through VB-Cable.
 - Per-sound volume control.
 - Local playback monitoring (hear sounds yourself).
 
-[Sound list screenshot]
-
 ### Hotkeys
 
 - Custom keyboard shortcut for each sound.
 - Global "Stop All" shortcut.
 - Hotkeys work even when the application is not focused.
 
-[Shortcut configuration screenshot]
-
 ### Microphone Controls
 
 - Microphone selection.
 - Real-time microphone level indicator.
 - Microphone volume adjustment.
-
-[Microphone panel screenshot]
 
 ### Configuration
 
@@ -149,7 +152,7 @@ Example:
             "volume": 0.75
         },
 
-        "snare.wav": {
+        "snare.mp3": {
             "shortcut": "ctrl+2",
             "volume": 1.0
         }
