@@ -1,5 +1,5 @@
 # Keyboard soundBoard
-![Logo.png](Images/Banniere_KeyboardeSoundboard.png)
+![Logo.png](images/Banniere_KeyboardeSoundboard.png)
 
 <div align=center>
   <img alt="Taille du code GitHub" src="https://img.shields.io/github/languages/code-size/Wanous/Keyboard-soundboard?label=taille%20du%20code">
@@ -13,7 +13,7 @@ A lightweight desktop soundboard built with CustomTkinter.
 
 SoundBoard allows you to play sounds using customizable keyboard shortcuts and send them directly through your microphone using VB-Cable. It includes real-time microphone mixing, per-sound volume control, and global hotkeys, making it useful for gaming, streaming, online meetings, or simply having fun with friends.
 
-![interface.png](Images/interface.png)
+![interface.png](images/interface.png)
 
 ## Supported Operating Systems
 
