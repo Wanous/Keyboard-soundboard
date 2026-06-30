@@ -143,7 +143,7 @@ Example:
         "local_playback_enabled": true,
         "microphone_volume": 1.0,
         "default_microphone": 5,
-        "panic_shortcut": "middle mouse"
+        "panic_shortcut": "backspace"
     },
 
     "sound_datas": {
