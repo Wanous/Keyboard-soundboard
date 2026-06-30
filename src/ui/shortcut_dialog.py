@@ -1,6 +1,25 @@
 import customtkinter as ctk
+import keyboard
+
+# Tkinter (keysym) to keyboard mapping 
+KEY_MAPPING = {
+    "control_l": "ctrl",
+    "control_r": "ctrl",
+    "shift_l": "shift",
+    "shift_r": "shift",
+    "alt_l": "alt",
+    "alt_r": "alt",
+    "return": "enter",
+    "escape": "esc",
+    "prior": "page up",
+    "next": "page down",
+    "caps_lock": "caps lock",
+    "backspace": "backspace",
+    "space": "space",
+}
 
 class ShortcutDialog(ctk.CTkToplevel):
+
 
     def __init__(self, app, filename, item_widget, sender = "sound_shortcut"):
 
@@ -52,15 +71,21 @@ class ShortcutDialog(ctk.CTkToplevel):
     def on_press(self, event):
 
         key = event.keysym.lower()
+        key = KEY_MAPPING.get(key, key)
+
+        try:
+            key = keyboard.normalize_name(key)
+        except ValueError:
+            return
 
         if key not in self.current_keys:
             self.current_keys.add(key)
 
-        self.display.configure(text="+".join(sorted(self.current_keys)))
+        self.display.configure(text="+".join(self.current_keys))
 
     def validate(self):
 
-        shortcut = "+".join(sorted(self.current_keys))
+        shortcut = "+".join(self.current_keys)
 
         if self.sender != "sound_shortcut":
             self.app.parameters[self.sender] = shortcut
@@ -68,7 +93,10 @@ class ShortcutDialog(ctk.CTkToplevel):
             self.item_widget.configure(text=shortcut)
             self.close()
         else:
-            self.app.shortcuts[self.filename] = {"shortcut": shortcut}
+            if self.filename not in self.app.shortcuts:
+                self.app.shortcuts[self.filename] = {}
+
+            self.app.shortcuts[self.filename]["shortcut"] = shortcut
 
         self.app.save_config()
 

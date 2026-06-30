@@ -122,7 +122,7 @@ class SoundItemWidget(ctk.CTkFrame):
 
         self.app.sound_manager.delete_sound(self.filename)
         self.app.shortcuts.pop(self.filename,None)
-        self.app.save_shortcuts()
+        self.app.register_shortcuts()
         self.app.sound_frame.refresh()
 
     def open_shortcut_dialog(self):
