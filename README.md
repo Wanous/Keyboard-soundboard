@@ -21,9 +21,9 @@ SoundBoard allows you to play sounds using customizable keyboard shortcuts and s
 
 Fully supported and tested.
 
-Requirements (for development) :
+Requirements :
 
-- Python 3.11+
+- Python 3.11+ (for development) 
 - VB-Cable
 
 ### Linux
