@@ -6,10 +6,10 @@
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Wanous/Keyboard-soundboard?logo=github&style=plastic">
   <img alt="License" src="https://img.shields.io/github/license/Wanous/Keyboard-soundboard?style=plastic">
   <p></p>
-  <p>Style your Firefox with simple and easy to custom CSS configurations!</p>
+  <p> Make your keyboard a soundboard </p>
 </div>
 
-A lightweight desktop soundboard built with CustomTkinter.
+A desktop soundboard built with CustomTkinter.
 
 SoundBoard allows you to play sounds using customizable keyboard shortcuts and send them directly through your microphone using VB-Cable. It includes real-time microphone mixing, per-sound volume control, and global hotkeys, making it useful for gaming, streaming, online meetings, or simply having fun with friends.
 
